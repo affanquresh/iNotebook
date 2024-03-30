@@ -20,7 +20,7 @@ const Login = (props) => {
     console.log(json)
     if (json.success) {
       localStorage.setItem('token', json.authTOken)
-      props.showAlert('success', 'logges in successfully')
+      props.showAlert('success', 'logged in successfully')
       navigate('/')
     } else {
       props.showAlert('danger', 'please enter valid credentials')
@@ -32,7 +32,7 @@ const Login = (props) => {
   }
 
   return (
-    <div>
+    <div className="login-div">
       <h1>Log in to view your notes</h1>
       <form onSubmit={handleSubmit}>
         <div className="mb-3">
